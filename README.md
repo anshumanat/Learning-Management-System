@@ -62,6 +62,41 @@ StudyNotion/
 
 ---
 
+## 🏗️ System Architecture (Mermaid Diagram)
+
+```
+flowchart TD
+    A[Frontend - React.js + Redux + Tailwind CSS] --> B[Backend API - Node.js + Express.js]
+    B --> C[MongoDB Atlas - Database]
+    B --> D[Cloudinary - Media Storage]
+    B --> E[Payment Gateway - Razorpay / Stripe]
+```
+
+---
+
+## 🔄 Workflow Diagram (Mermaid Diagram)
+
+```
+sequenceDiagram
+    participant U as User
+    participant F as Frontend (React + Redux)
+    participant B as Backend API (Express.js)
+    participant DB as MongoDB
+    participant CL as Cloudinary
+    participant PG as Payment Gateway
+    
+    U->>F: Browse courses / perform actions
+    F->>B: Send API requests
+    B->>DB: Fetch / store user & course data
+    B->>CL: Upload / retrieve course media
+    B->>PG: Process payments
+    PG-->>B: Payment confirmation
+    B-->>F: Response with requested data
+    F-->>U: Update UI with results
+```
+
+---
+
 ## ⚡ Getting Started  
 
 ### Prerequisites  
@@ -108,8 +143,8 @@ StudyNotion/
 ---
 
 ## 📸 Screenshots  
-<img width="1819" height="878" alt="image" src="https://github.com/user-attachments/assets/f6109468-6a75-4a72-92bd-43d642cc431b" />
- 
+<img width="1819" height="878" alt="image" src="https://github.com/user-attachments/assets/3c01115c-a94c-4e98-b25d-94eb9428f1ec" />
+
 
 ---
 
@@ -131,5 +166,5 @@ StudyNotion/
 ## 📜 License  
 This project is licensed under the **MIT License** – feel free to use and modify it.  
 ```
+ 
 
-*** 
